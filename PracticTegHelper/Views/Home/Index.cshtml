@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<environment names="Development">
+    <link asp-href-include="~/css/*.css" />
+</environment>
+
+<environment names="Development">
+    <script asp-src-include="~/js/*.js"></script>
+</environment>
+
+
+@model Product
+<form asp-action="Index" asp-controller="Home">
+    <div>
+        <div>
+            <label asp-for="Name"></label>
+            <input type="text" asp-for="Name" />
+        </div>
+        <div>
+            <label asp-for="Description"></label>
+            <input type="text" asp-for="Description" />
+        </div>
+        <div>
+            <label asp-for="Category"></label>
+            <input type="text" asp-for="Category" />
+        </div>
+        <div>
+            <label asp-for="Price"></label>
+            <input asp-for="Price" />
+        </div>
+       
+    
+        <div>
+            <input type="submit" value="Save" />
+        </div>
+    </div>
+</form>
